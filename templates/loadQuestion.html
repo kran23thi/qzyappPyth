@@ -38,12 +38,12 @@ Created on Mon Mar 30 19:41:31 2020
         </tr>
         {% for row in questionDisplay.question %}
             <tr>
-                <td>{{row[1]}}</td>
+                <td>{{row[1]}}<br /><br /></td>
                 <fieldset>
                     {% for element in row %}
                     {% if not element==row[0] %}
                     {% if not element==row[1] %}
-                <td><input type="radio" name={{row[0]}} value={{element}}>{{element}}</input></td>
+                <td><input type="radio" name={{row[0]}} value={{element}}>{{element}}</input><br /></td>
                     {% endif %}
                     {% endif %}
                     {% endfor %}

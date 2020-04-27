@@ -257,8 +257,8 @@ def Question():
                 score=score+1
             print("total score %s" % (score))
             
-          count = cur.rowcount
-          if count>0:
+        count = cur.rowcount
+        if count>0:
             flash('Quiz result submitted', 'success')    
             
             

@@ -1,0 +1,47 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 21 13:39:03 2020
+
+@author: RSHARAD
+"""-->
+
+<!DOCTYPE html
+<html>
+	<head>
+		<title>Leader Board</title>
+	</head>
+	<body>
+		<!--<div id='container'>-->
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+		<form method="POST">
+		
+		<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Score</th>
+    </tr>
+    </thead>
+    <tbody>
+        
+        {% for item in result %}
+            <tr>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+            </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+		
+</form>
+    	</div>
+{% endblock content %}
+
+		<!--<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>-->
+		<!--<script type="text/javascript" src='questions.json'></script>-->
+		<!--<script type='text/javascript' src='jsquiz.js'></script> -->
+	</body>
+</html>

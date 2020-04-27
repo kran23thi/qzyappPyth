@@ -1,0 +1,66 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar 30 19:41:31 2020
+
+@author: RSHARAD
+"""-->
+
+
+<!DOCTYPE html
+<html>
+	<head>
+		<title>Questions</title>
+	</head>
+	<body>
+		<!--<div id='container'>-->
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+		<form method="POST">
+		
+			<table>
+    <thead>
+    <tr>
+        <th>Question</th>
+        <th>Options</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <label for="username">Name:</label>
+          <input type="text" id="username" name="username"><br><br>
+  
+        </tr>
+        
+        <tr>
+        <label for="team">Team:</label>
+          <input type="text" id="team" name="team"><br><br>
+        </tr>
+        {% for row in questionDisplay.question %}
+            <tr>
+                <td>{{row[1]}}</td>
+                <fieldset>
+                    {% for element in row %}
+                    {% if not element==row[0] %}
+                    {% if not element==row[1] %}
+                <td><input type="radio" name={{row[0]}} value={{element}}>{{element}}</input></td>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </fieldset>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+    	<input type="submit" value="Submit!" />
+    	</form>	
+    	</div>
+{% endblock content %}
+
+		<!--<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>-->
+		<!--<script type="text/javascript" src='questions.json'></script>-->
+		<!--<script type='text/javascript' src='jsquiz.js'></script> -->
+	</body>
+</html>

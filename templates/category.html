@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+{% extends "layout.html" %}
+{% block content %}
+<h3>Select category</h3>
+<form>
+<select name="list" id="list">
+    <option href="" value=1>Technical</option>
+    <option href="" value=2>About Daimler</option>
+    <option href="" value=3>Cloud</option>
+</select>
+</form><br><br>
+<form action="/submitform">
+<input type="submit" value="Submit" />
+</form>
+
+{% endblock content %}
+</body>
+</html>

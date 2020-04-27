@@ -1,0 +1,89 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 31 08:52:35 2020
+
+@author: RSHARAD
+"""-->
+
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Question</legend>
+                <div class="form-group">
+                    {{ form.question.label(class="form-control-label") }}
+
+                    {% if form.question.errors %}
+                        {{ form.question(class="form-control form-control-lg input-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.question.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.question(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="radio">
+                    {{ form.optiona.label(class="form-control-label") }}
+                    {% if form.optiona.errors %}
+                        {{ form.optiona(class="form-control form-control-lg is-invalid",value="optiona") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.optiona.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.optiona(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="radio">
+                    {{ form.optionb.label(class="form-control-label") }}
+                    {% if form.optionb.errors %}
+                        {{ form.optionb(class="form-control form-control-lg is-invalid",value="optionb") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.optionb.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.optionb(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="radio">
+                    {{ form.optionc.label(class="form-control-label") }}
+                    {% if form.optionc.errors %}
+                        {{ form.optionc(class="form-control form-control-lg is-invalid",value="optionc") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.optionc.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.optionc(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                                <div class="radio">
+                    {{ form.optiond.label(class="form-control-label") }}
+                    {% if form.optiond.errors %}
+                        {{ form.optiond(class="form-control form-control-lg is-invalid",value="optionc") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.optiond.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.optiond(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                                               
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

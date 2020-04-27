@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Question</legend>
+                <div class="form-group">
+                    {{ form.question.label(class="form-control-label") }}
+
+                    {% if form.question.errors %}
+                        {{ form.question(class="form-control form-control-lg input-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.question.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.question(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.AOption.label(class="form-control-label") }}
+                    {% if form.AOption.errors %}
+                        {{ form.AOption(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.eAOptionmail.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.AOption(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.BOption.label(class="form-control-label") }}
+                    {% if form.BOption.errors %}
+                        {{ form.BOption(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.pasBOptionsword.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.BOption(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="">
+                    {{ form.COption.label(class="form-control-label") }}
+                    {% if form.COption.errors %}
+                        {{ form.COption(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.COption.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.COption(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                                <div class="">
+                    {{ form.DOption.label(class="form-control-label") }}
+                    {% if form.DOption.errors %}
+                        {{ form.DOption(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.DOption.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.DOption(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                    <div class="form-group">
+                    {{ form.Answer.label(class="form-control-label") }}
+                    {% if form.Answer.errors %}
+                        {{ form.Answer(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Answer.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Answer(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                
+                    <div class="form-group">
+                    {{ form.category.label(class="form-control-label") }}
+                    {% if form.category.errors %}
+                        {{ form.category(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.category.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.category(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.quizId.label(class="form-control-label") }}
+                    {% if form.quizId.errors %}
+                        {{ form.quizId(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.quizId.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.quizId(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

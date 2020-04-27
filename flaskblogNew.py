@@ -167,7 +167,7 @@ def submitform():
         Question_count=cur1.fetchall()
         print(Question_count)'''
         
-        Max_qid = "select MAX(qnid) from questiondummy group by qnid"
+        Max_qid = "select MAX(qnid) from questiondummy"
         cur2.execute(Max_qid)
         print(cur2.rowcount)
         Max_qid_value=cur2.fetchall()
